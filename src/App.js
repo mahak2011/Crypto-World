@@ -4,7 +4,6 @@ import { Layout, Typography, Space } from "antd";
 import {
   Navbar,
   Homepage,
-  Exchanges,
   Cryptocurrencies,
   CryptoDetails,
   News,
@@ -22,7 +21,6 @@ function App() {
           <div className="routes">
             <Routes>
               <Route exact path="/" element={<Homepage />} />
-              <Route exact path="/exchanges" element={<Exchanges />} />
               <Route exact path="/crypto/:coinId" element={<CryptoDetails />} />
               <Route
                 exact
