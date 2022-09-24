@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { Button, Menu, Typography, Avatar, Image } from "antd";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { Button, Menu, Typography, Avatar, Image } from 'antd';
+import { Link } from 'react-router-dom';
 import {
   HomeOutlined,
   BulbOutlined,
   FundOutlined,
   MenuOutlined,
-} from "@ant-design/icons/lib/icons";
-import icon from "../images/cryptocurrency(1).png";
+} from '@ant-design/icons/lib/icons';
+import icon from '../images/cryptocurrency.png';
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(true);
@@ -15,9 +15,9 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     handleResize();
-    return () => window.removeEventListener("resize", handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   useEffect(() => {
@@ -32,13 +32,9 @@ const Navbar = () => {
     <div className="navbar-container">
       <div className="logo-container">
         <Avatar
-          src={
-            <Image
-              src={icon}
-              preview={false}
-              // style={{ objectFit: "cover", width: "32.5px" }}
-            />
-          }
+          size="large"
+          shape="square"
+          src={<Image src={icon} preview={false} />}
         />
         <Typography.Title level={2} className="logo">
           <Link to="/">Crypto World</Link>
